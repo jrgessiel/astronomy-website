@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    font-size: 16px;
+    color: #FEFEFE;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#fullpage {
+    height: 100vh;   
+}
+
+#fullpage section {
+    height: 100vh;
+}
+
+#fullpage section:nth-child(1) {
+    background-image: url("/images/bg-astronomy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Turret Road', cursive;
+    font-size: 25px;
+    color: #FEFEFE;
+}
+
+.r-menu a {
+    color: #FEFEFE;
+    margin: 0px 20px;
+    letter-spacing: 1px;
+}
+
+.r-menu button {
+    color: #000000;
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #000000;
+    color: #FEFEFE;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+.text {
+    position: absolute;
+    left: 51%;
+    top: 51%;
+    transform: translate(-51%, -51%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.earth span, .earth-1 span {
+    font-weight: 600;
+    font-size: 22px;
+    padding: 3px 8px;
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #FEFEFE;
+    border-radius: 20%;
+}
+
+.earth span:nth-child(4) {
+    margin-right: 30px;
+}
+
+.text h1, .text-1 h1 {
+    font-family: 'Turret Road', cursive;
+    font-size: 75px;
+    color: #FEFEFE;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    font-weight: 200;
+}
+
+.text button, .text-1 button {
+    width: 120px;
+    height: 40px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #FEFEFE;
+    margin-top: 20px;
+    color: #FEFEFE;
+}
+
+.text button:hover, .text-1 button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    border: none;
+    transition: all ease 0.2s;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.social p, .social-1 p {
+    color: #e3e8eb;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #D3D7E1;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon i {
+    color: #131313;
+    font-size: 12px;
+}
+
+.social-icon a:hover i {
+    color: #EBE9E9;
+}
+
+.social-icon a:hover {
+    background-color: #171717;
+}
+
+#fullpage section:nth-child(2) {
+    background-image: url("/images/bg-hubble.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-1 {
+    position: absolute;
+    left: 51%;
+    top: 151%;
+    transform: translate(-51%, -51%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.social-1 {
+    position: absolute;
+    top: 185%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+    text-align: center;
+}
+
+@media(max-width: 780px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .r-menu a {
+        display: none;
+    }
+
+    .text h1 {
+        font-size: 50px;
+        letter-spacing: 20px;
+    }
+}
