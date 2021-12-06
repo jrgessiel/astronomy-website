@@ -1,4 +1,4 @@
-@charset "utf-8";
+/* <!-- --!> */
 
 * {
     margin: 0;
@@ -6,211 +6,238 @@
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
 body {
-    font-family: Calibri, sans-serif;
-    font-size: 16px;
-    color: #FEFEFE;
-    background-color: rgba(0, 0, 0, 0.8);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    color: #f8f8f8;
+    cursor: default;
 }
 
-
-#fullpage {
-    height: 100vh;   
+button {
+    border-style: none;
+    cursor: pointer;
 }
 
-#fullpage section {
+/* <!-- --!> */
+
+#fullscreen {
+    position: absolute;
+    z-index: -100;
+    height: 200vh; width: 100%;
+    background-color: rgba(31, 32, 33, 1); 
+}
+
+.page {
     height: 100vh;
 }
 
-#fullpage section:nth-child(1) {
-    background-image: url("/images/bg-astronomy.jpg");
-    background-size: cover;
+/* First page config */
+
+.one {
+    background-color: steelblue;
+    background-image: url("../images/bg-astronomy.jpg");
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
+
+    position: relative;
+    opacity: 78%;
 }
 
-nav {
+/* Second page config */
+
+.two {
+    background-color: tomato;
+    background-image: url("../images/bg-hubble.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+    opacity: 78%;
+}
+
+/* Header - navbar-button */
+
+header {
     display: flex;
     justify-content: space-between;
-    padding: 25px 50px;
-    align-items: center;
+    padding: 1.444rem;
+
+    border: -0.15em solid #FeFeFe;
+    border-radius: 4.444em; 
+    box-shadow: inset 0.5em 0.2em 0.777em #Fefefe;
 }
 
-.logo {
-    font-family: 'Turret Road', cursive;
-    font-size: 25px;
-    color: #FEFEFE;
-}
-
-.r-menu a {
-    color: #FEFEFE;
-    margin: 0px 20px;
-    letter-spacing: 1px;
-}
-
-.r-menu button {
-    color: #000000;
-    width: 90px;
-    height: 35px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-weight: 700;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: #000000;
-    color: #FEFEFE;
-}
-
-button:active {
+header .logo:hover, header nav p:hover {
+    transition: 0.2s ease;
     transform: scale(1.1);
 }
 
-.text {
-    position: absolute;
-    left: 51%;
-    top: 51%;
-    transform: translate(-51%, -51%);
+header nav {
     display: flex;
     align-items: center;
+}
+
+header nav p {
+    margin: 0 0.777rem;
+    font-size: 0.7em;
+}
+
+header nav .btn-donate {
+    height: 100%; width: 5rem;
+    background-color: #f8f8f8;
+    color: #0e0e0e;
+
+    border-radius: 1.1em;
+}
+
+header nav .btn-donate:hover {
+    background-color: #0e0e0e;
+    color: #f8f8f8;
+    
+    transform: scale(1.03);
+    transition: 0.4s ease;
+    border: 1px solid #f8f8f8;
+}
+
+/* Main - texts - button */
+
+.container-text {
+    position: relative;
+    margin-top: 2em;
+
+    display: flex;
+    width: 100%; height: 50vh;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+
+    padding: 4em 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
-.earth span, .earth-1 span {
-    font-weight: 600;
-    font-size: 22px;
-    padding: 3px 8px;
-    margin: 2px;
-    background-color: rgba(0, 0, 0, 0.15);
-    color: #FEFEFE;
-    border-radius: 20%;
+.sub-title {
+    font-size: 1.555em;
+    text-shadow: rgba(0, 0, 0, 0.7) -0.07em 0.07em;
 }
 
-.earth span:nth-child(4) {
-    margin-right: 30px;
+.title {
+    font-size: 2.444em;
+    text-shadow: rgba(0, 0, 0, 0.7) -0.07em 0.095em;
 }
 
-.text h1, .text-1 h1 {
-    font-family: 'Turret Road', cursive;
-    font-size: 75px;
-    color: #FEFEFE;
-    margin: 0;
-    margin-top: 10px;
-    padding: 0;
-    font-weight: 200;
-}
-
-.text button, .text-1 button {
-    width: 120px;
-    height: 40px;
-    outline: none;
-    background-color: transparent;
-    border: 1px solid #FEFEFE;
-    margin-top: 20px;
-    color: #FEFEFE;
-}
-
-.text button:hover, .text-1 button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    border: none;
+.btn-more {
+    width: 6.66rem; height: 2.44rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-top: 2em;
+    border: 0.07em solid #c5c5c5;
+    color: #f8f8f8;
+    text-shadow: 0.6em 0.4em 01em #0e0e0e;
+    font-weight: bold;
+    text-transform: uppercase;
     transition: all ease 0.2s;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-.social {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+.btn-more:hover {
+    transform: scale(1.08);
+    border: none;
+    box-shadow: 0.02em 0.02em 1em rgba(0, 0, 0, 0.8);
 }
 
-.social p, .social-1 p {
-    color: #e3e8eb;
-    letter-spacing: 1px;
-    margin: 20px;
+a {
+    text-decoration: none;
+    color: #0e0e0e;
 }
 
-.social-icon {
+footer {
+    margin: 1.5em;
+}
+
+footer p {
     display: flex;
     justify-content: center;
 }
 
-.social-icon a {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #D3D7E1;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    margin: 0px 5px;
+.social-media {
+    margin-top: 0.5em;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.social-icon i {
-    color: #131313;
-    font-size: 12px;
+.social-media i {
+    font-size: 1.25em ;
+    color: #FeFeFe;
+    margin: 0 0.333em;
 }
 
-.social-icon a:hover i {
-    color: #EBE9E9;
+.social-media i:hover {
+    transform: scale(1.5);
+    border: none;
+    text-shadow: 0.02em 0.02em 1em rgba(255, 255, 255, 1);
+    transition: 0.4s ease;
 }
 
-.social-icon a:hover {
-    background-color: #171717;
-}
-
-#fullpage section:nth-child(2) {
-    background-image: url("/images/bg-hubble.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.text-1 {
-    position: absolute;
-    left: 51%;
-    top: 151%;
-    transform: translate(-51%, -51%);
+.page-control {
+    width: 5%;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    text-align: center;
 }
 
-.social-1 {
-    position: absolute;
-    top: 185%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 25px;
-    text-align: center;
+.page-control i {
+    font-size: 1.5em;
+    color: #FeFeFe;
+    margin: 0.2em;
 }
 
-@media(max-width: 780px) {
-    nav {
-        padding: 15px 20px;
+.page-control i:hover {
+    transform: scale(1.2);
+    text-shadow: 0.02em 0.02em 1em rgb(0, 0, 0);
+    transition: 0.4s ease;
+}
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 484px) { 
+    header {
+        visibility: hidden;
+    }
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+    .container-text {
+        height: 54vh;
+    }
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) {
+
+    body {
+        font-size: 1.2rem;
     }
 
-    .r-menu a {
-        display: none;
+    .container-text {
+        height: 50vh;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.25rem;
     }
 
-    .text h1 {
-        font-size: 50px;
-        letter-spacing: 20px;
+    header {
+        padding: 1.77rem;
+    }
+
+    .container-text {
+        height: 52vh;
+    }
+
+    .btn-more {
+        width: 6.66rem; height: 2.44rem;
+        margin-top: 2em;
+
     }
 }
